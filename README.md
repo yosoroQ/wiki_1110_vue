@@ -1,2 +1,24 @@
-# 【前端】知识库wiki项目（wiki_1110_vue）
-【前端】知识库wiki项目（wiki_1110_vue）
+# web
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
