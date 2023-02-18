@@ -24,7 +24,7 @@
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
       <div class="welcome" v-show="isShowWelcome">
-        <h1>欢迎使用知识库</h1>
+        <the-welcome></the-welcome>
       </div>
       <a-list v-show="!isShowWelcome" item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :data-source="ebooks">
         <template #renderItem="{ item }">
@@ -63,10 +63,26 @@ import { defineComponent, onMounted, ref, reactive, toRef } from 'vue';
 import axios from 'axios';
 import { message } from 'ant-design-vue';
 import {Tool} from "@/util/tool";
+import TheWelcome from '@/components/the-welcome.vue';
 
+// const listData: any = [];
+// for (let i = 0; i < 23; i++) {
+//   listData.push({
+//     href: 'https://www.antdv.com/',
+//     title: `ant design vue part ${i}`,
+//     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+//     description:
+//         'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+//     content:
+//         'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+//   });
+// }
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    TheWelcome
+  },
   setup() {
     const ebooks = ref();
     // const ebooks1 = reactive({books: []});
@@ -136,11 +152,6 @@ export default defineComponent({
         },
         pageSize: 3,
       },
-      // actions: [
-      //   { type: 'StarOutlined', text: '156' },
-      //   { type: 'LikeOutlined', text: '156' },
-      //   { type: 'MessageOutlined', text: '2' },
-      // ],
 
       handleClick,
       level1,
@@ -160,3 +171,5 @@ export default defineComponent({
   margin: 5px 0;
 }
 </style>
+
+

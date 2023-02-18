@@ -20,7 +20,7 @@
   });
 </script>
 
-<style>
+<!--<style>
   #components-layout-demo-top-side-2 .logo {
     width: 120px;
     height: 31px;
@@ -28,4 +28,4 @@
     margin: 16px 28px 16px 0;
     float: left;
   }
-</style>
+</style>-->
